@@ -1,5 +1,5 @@
 # First stage: build the JAR file
-FROM maven:3.8.1-openjdk-11 AS builder
+FROM registry.access.redhat.com/ubi8/openjdk-17:1.16-2 AS builder
 WORKDIR /app
 COPY . .
 RUN mvn clean package
